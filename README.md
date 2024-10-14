@@ -17,17 +17,6 @@ A modelagem das classes do projeto segue a estrutura abaixo, com uma relação d
 
 ```mermaid
 classDiagram
-    class Pessoa {
-        <<abstract>>
-        -String id_pessoa
-        -String nome
-        -String cpf
-        -String email
-        -String dataNascimento
-        -String telefone
-        -String curso
-    }
-
     class Endereco {
         -String logradouro
         -String bairro
@@ -39,16 +28,28 @@ classDiagram
     }
 
     class Professor {
-        -String id_professor
+        -String id_professor 
+        -String nome
+        -String cpf
+        -String email
+        -String dataNascimento
+        -String telefone
+        -String curso
     }
 
     class Aluno {
         -String id_aluno
+        -String nome
+        -String cpf
+        -String email
+        -String dataNascimento
+        -String telefone
+        -String curso
     }
 
-    Pessoa --> Endereco : possui
-    Pessoa <|-- Professor : herda
-    Pessoa <|-- Aluno : herda
+    Professor --> Endereco : possui
+    Aluno --> Endereco : possui
+
 ```
 
 ## 🚀 Tecnologias Utilizadas
